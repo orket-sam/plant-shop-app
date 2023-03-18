@@ -13,25 +13,39 @@ class PlantScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                SizedBox(
+                Container(
+                  decoration: const BoxDecoration(
+                      color: Color(0xfff2f7fe),
+                      borderRadius:
+                          BorderRadius.vertical(bottom: Radius.circular(30))),
                   width: double.infinity,
                   height: MediaQuery.of(context).size.height * 0.4,
-                  child: Image.asset(
-                    'assets/images/vase.jpg',
-                    fit: BoxFit.cover,
-                    width: double.infinity,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/images/vase.png',
+                      fit: BoxFit.contain,
+                      width: double.infinity,
+                    ),
                   ),
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.arrow_back_ios),
+                Positioned(
+                  left: 10,
+                  top: 10,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.black,
+                    ),
+                  ),
                 )
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            Expanded(
+              child: ListView(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
                 children: [
                   const SizedBox(height: 10),
                   Row(
