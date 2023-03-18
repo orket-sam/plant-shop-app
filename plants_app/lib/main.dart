@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plants_app/home_widget.dart';
+import 'package:plants_app/plants_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      home: HomeWidget(),
+      home: const PlantsScreen(),
     );
   }
 }

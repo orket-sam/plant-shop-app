@@ -47,8 +47,12 @@ class HomeWidget extends StatelessWidget {
                   const Spacer(),
                 ],
               ),
-              Container(
-                color: Colors.black87.withOpacity(0.6),
+              ClipPath(
+                clipper: CustomClip(),
+                child: Container(
+                  height: MediaQuery.of(context).size.height / 2,
+                  color: Colors.black87.withOpacity(0.3),
+                ),
               )
             ],
           ),
